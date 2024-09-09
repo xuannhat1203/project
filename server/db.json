@@ -1,0 +1,715 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Khóa luyện thi đại học 2",
+      "description": "Khóa luyện thi cho học sinh chuẩn bị thi đại học",
+      "type": "course"
+    },
+    {
+      "id": 2,
+      "title": "Khóa học lập trình cơ bản",
+      "description": "Khóa học dành cho người mới bắt đầu học lập trình, bao gồm các ngôn ngữ lập trình phổ biến"
+    },
+    {
+      "id": 3,
+      "title": "Khóa luyện thi THPT",
+      "description": "Dành cho học sinh lớp 10,11,12"
+    }
+  ],
+  "accountAdmin": {
+    "email": "admin1203@gmail.com",
+    "passWord": "admin1203"
+  },
+  "examSubjects": [
+    {
+      "id": 1,
+      "title": "Môn Toán",
+      "description": "Luyện thi đại học Toán học ha",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "title": "Vật lý lớp 11",
+      "description": "Luyện thi Vật lí lớp 11",
+      "courseId": 2
+    },
+    {
+      "id": 3,
+      "title": "Hòa học lớp 10",
+      "courseId": 2,
+      "description": "Luyện thi Hóa học lớp 10"
+    },
+    {
+      "title": "Môn Toán 3",
+      "description": "Luyện thi đại học Toán học",
+      "courseId": 5,
+      "id": 5
+    }
+  ],
+  "exam": [
+    {
+      "id": 1,
+      "title": "Đề thi Toán học THPT Chuyên Lam Sơn Thanh Hóa",
+      "description": "Đề thi toán học năm 2023",
+      "duration": 92,
+      "examSubjectId": 1
+    },
+    {
+      "id": 2,
+      "title": "Đề thi Vật lý cơ bản lớp 13",
+      "description": "Đề thi gồm các câu hỏi cơ bản Vật lý 13",
+      "duration": 66,
+      "examSubjectId": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Phương trình có nghiệm X = ? X^2 - 2X + 1 = 0",
+      "examId": 1,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "1"
+    },
+    {
+      "id": 2,
+      "question": "Tìm giá trị của X: X^2 + 4X + 4 = 0",
+      "examId": 1,
+      "options": [
+        "-2",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": "-2"
+    },
+    {
+      "id": 3,
+      "question": "Phương trình bậc nhất X + 5 = 0 có nghiệm là:",
+      "examId": 1,
+      "options": [
+        "-5",
+        "0",
+        "5",
+        "10"
+      ],
+      "answer": "-5"
+    },
+    {
+      "id": 4,
+      "question": "Phương trình X^2 - 9 = 0 có nghiệm là:",
+      "examId": 1,
+      "options": [
+        "-3",
+        "3",
+        "-3 và 3",
+        "0"
+      ],
+      "answer": "-3 và 3"
+    },
+    {
+      "id": 5,
+      "question": "Giải phương trình: X^2 - 16 = 0",
+      "examId": 2,
+      "options": [
+        "4",
+        "-4",
+        "4 và -4",
+        "0"
+      ],
+      "answer": "4 và -4"
+    },
+    {
+      "id": 6,
+      "question": "Giải phương trình: X - 10 = 0",
+      "examId": 2,
+      "options": [
+        "0",
+        "10",
+        "-10",
+        "5"
+      ],
+      "answer": "10"
+    },
+    {
+      "id": 7,
+      "question": "Phương trình X^2 - 25 = 0 có nghiệm là:",
+      "examId": 2,
+      "options": [
+        "5",
+        "-5",
+        "5 và -5",
+        "0"
+      ],
+      "answer": "5 và -5"
+    },
+    {
+      "id": 8,
+      "question": "Giải phương trình: 2X + 6 = 0",
+      "examId": 2,
+      "options": [
+        "-3",
+        "3",
+        "0",
+        "-6"
+      ],
+      "answer": "-3"
+    },
+    {
+      "id": 9,
+      "question": "Phương trình X^2 - 4X + 4 = 0 có nghiệm là:",
+      "examId": 3,
+      "options": [
+        "2",
+        "-2",
+        "0",
+        "4"
+      ],
+      "answer": "2"
+    },
+    {
+      "id": 10,
+      "question": "Giá trị của X trong phương trình X^2 - 1 = 0 là:",
+      "examId": 3,
+      "options": [
+        "1",
+        "-1",
+        "1 và -1",
+        "0"
+      ],
+      "answer": "1 và -1"
+    },
+    {
+      "id": 11,
+      "question": "Giải phương trình: X + 8 = 0",
+      "examId": 3,
+      "options": [
+        "-8",
+        "8",
+        "0",
+        "-4"
+      ],
+      "answer": "-8"
+    },
+    {
+      "id": 12,
+      "question": "Phương trình X^2 - 36 = 0 có nghiệm là:",
+      "examId": 3,
+      "options": [
+        "6",
+        "-6",
+        "6 và -6",
+        "0"
+      ],
+      "answer": "6 và -6"
+    },
+    {
+      "id": 13,
+      "question": "Giải phương trình: X^2 - 2X = 0",
+      "examId": 4,
+      "options": [
+        "0 và 2",
+        "-2",
+        "2",
+        "0"
+      ],
+      "answer": "0 và 2"
+    },
+    {
+      "id": 14,
+      "question": "Giá trị của X trong phương trình 3X - 9 = 0 là:",
+      "examId": 4,
+      "options": [
+        "3",
+        "-3",
+        "0",
+        "9"
+      ],
+      "answer": "3"
+    },
+    {
+      "id": 15,
+      "question": "Phương trình X^2 - 49 = 0 có nghiệm là:",
+      "examId": 4,
+      "options": [
+        "7",
+        "-7",
+        "7 và -7",
+        "0"
+      ],
+      "answer": "7 và -7"
+    },
+    {
+      "id": 16,
+      "question": "Giải phương trình: X^2 - 2 = 0",
+      "examId": 4,
+      "options": [
+        "1",
+        "-1",
+        "Căn 2 và -Căn 2",
+        "0"
+      ],
+      "answer": "Căn 2 và -Căn 2"
+    },
+    {
+      "id": 17,
+      "question": "Giải phương trình: X - 20 = 0",
+      "examId": 5,
+      "options": [
+        "0",
+        "20",
+        "-20",
+        "10"
+      ],
+      "answer": "20"
+    },
+    {
+      "id": 18,
+      "question": "Phương trình X^2 + X - 6 = 0 có nghiệm là:",
+      "examId": 5,
+      "options": [
+        "2 và -3",
+        "1 và -1",
+        "2 và 3",
+        "-2 và 3"
+      ],
+      "answer": "2 và -3"
+    },
+    {
+      "id": 19,
+      "question": "Giải phương trình: X^2 + 9X + 14 = 0",
+      "examId": 5,
+      "options": [
+        "-2 và -7",
+        "-1 và -14",
+        "2 và 7",
+        "1 và 14"
+      ],
+      "answer": "-2 và -7"
+    },
+    {
+      "id": 20,
+      "question": "Giải phương trình: 5X + 25 = 0",
+      "examId": 5,
+      "options": [
+        "-5",
+        "5",
+        "0",
+        "-25"
+      ],
+      "answer": "-5"
+    }
+  ],
+  "userAnswers": [
+    {
+      "id": 1,
+      "useId": 1,
+      "exampId": 1,
+      "score": 15
+    },
+    {
+      "id": 2,
+      "useId": 2,
+      "exampId": 2,
+      "score": 8
+    },
+    {
+      "id": 3,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "passWord": "xuannhat1",
+      "email": "xuannhatvn211@gmail.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "status": 0
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "passWord": "xuannhat1",
+      "email": "xuannhatvn222@gmail.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "status": 0
+    },
+    {
+      "username": "xuannhat1203",
+      "email": "xuannhat1203@gmail.com",
+      "passWord": "xuannhat1",
+      "role": 1,
+      "profilePicture": "https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png",
+      "status": 1,
+      "type": "user",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "username": "user4",
+      "passWord": "password4",
+      "email": "user4@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1390487/pexels-photo-1390487.jpeg",
+      "status": 1
+    },
+    {
+      "id": 5,
+      "username": "user5",
+      "passWord": "password5",
+      "email": "user5@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1570182/pexels-photo-1570182.jpeg",
+      "status": 0
+    },
+    {
+      "id": 6,
+      "username": "user6",
+      "passWord": "password6",
+      "email": "user6@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1559315/pexels-photo-1559315.jpeg",
+      "status": 1
+    },
+    {
+      "id": 7,
+      "username": "user7",
+      "passWord": "password7",
+      "email": "user7@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1454647/pexels-photo-1454647.jpeg",
+      "status": 0
+    },
+    {
+      "id": 8,
+      "username": "user8",
+      "passWord": "password8",
+      "email": "user8@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1417420/pexels-photo-1417420.jpeg",
+      "status": 1
+    },
+    {
+      "id": 9,
+      "username": "user9",
+      "passWord": "password9",
+      "email": "user9@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1463740/pexels-photo-1463740.jpeg",
+      "status": 0
+    },
+    {
+      "id": 10,
+      "username": "user10",
+      "passWord": "password10",
+      "email": "user10@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1132836/pexels-photo-1132836.jpeg",
+      "status": 1
+    },
+    {
+      "id": 11,
+      "username": "user11",
+      "passWord": "password11",
+      "email": "user11@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/165689/pexels-photo-165689.jpeg",
+      "status": 0
+    },
+    {
+      "id": 12,
+      "username": "user12",
+      "passWord": "password12",
+      "email": "user12@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1761277/pexels-photo-1761277.jpeg",
+      "status": 1
+    },
+    {
+      "id": 13,
+      "username": "user13",
+      "passWord": "password13",
+      "email": "user13@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1483175/pexels-photo-1483175.jpeg",
+      "status": 0
+    },
+    {
+      "id": 14,
+      "username": "user14",
+      "passWord": "password14",
+      "email": "user14@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
+      "status": 1
+    },
+    {
+      "id": 15,
+      "username": "user15",
+      "passWord": "password15",
+      "email": "user15@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1556682/pexels-photo-1556682.jpeg",
+      "status": 0
+    },
+    {
+      "id": 16,
+      "username": "user16",
+      "passWord": "password16",
+      "email": "user16@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1399191/pexels-photo-1399191.jpeg",
+      "status": 1
+    },
+    {
+      "id": 17,
+      "username": "user17",
+      "passWord": "password17",
+      "email": "user17@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/3739490/pexels-photo-3739490.jpeg",
+      "status": 0
+    },
+    {
+      "id": 18,
+      "username": "user18",
+      "passWord": "password18",
+      "email": "user18@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1460707/pexels-photo-1460707.jpeg",
+      "status": 1
+    },
+    {
+      "id": 19,
+      "username": "user19",
+      "passWord": "password19",
+      "email": "user19@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/2648327/pexels-photo-2648327.jpeg",
+      "status": 0
+    },
+    {
+      "id": 20,
+      "username": "user20",
+      "passWord": "password20",
+      "email": "user20@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/164077/pexels-photo-164077.jpeg",
+      "status": 1
+    },
+    {
+      "id": 21,
+      "username": "user21",
+      "passWord": "password21",
+      "email": "user21@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/2647518/pexels-photo-2647518.jpeg",
+      "status": 0
+    },
+    {
+      "id": 22,
+      "username": "user22",
+      "passWord": "password22",
+      "email": "user22@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/3397294/pexels-photo-3397294.jpeg",
+      "status": 1
+    },
+    {
+      "id": 23,
+      "username": "user23",
+      "passWord": "password23",
+      "email": "user23@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/3452022/pexels-photo-3452022.jpeg",
+      "status": 0
+    },
+    {
+      "id": 24,
+      "username": "user24",
+      "passWord": "password24",
+      "email": "user24@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1108095/pexels-photo-1108095.jpeg",
+      "status": 1
+    },
+    {
+      "id": 25,
+      "username": "user25",
+      "passWord": "password25",
+      "email": "user25@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1422280/pexels-photo-1422280.jpeg",
+      "status": 0
+    },
+    {
+      "id": 26,
+      "username": "user26",
+      "passWord": "password26",
+      "email": "user26@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1392537/pexels-photo-1392537.jpeg",
+      "status": 1
+    },
+    {
+      "id": 27,
+      "username": "user27",
+      "passWord": "password27",
+      "email": "user27@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/3498251/pexels-photo-3498251.jpeg",
+      "status": 0
+    },
+    {
+      "id": 28,
+      "username": "user28",
+      "passWord": "password28",
+      "email": "user28@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1392635/pexels-photo-1392635.jpeg",
+      "status": 1
+    },
+    {
+      "id": 29,
+      "username": "user29",
+      "passWord": "password29",
+      "email": "user29@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1704124/pexels-photo-1704124.jpeg",
+      "status": 0
+    },
+    {
+      "id": 30,
+      "username": "user30",
+      "passWord": "password30",
+      "email": "user30@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/265267/pexels-photo-265267.jpeg",
+      "status": 1
+    },
+    {
+      "id": 31,
+      "username": "user31",
+      "passWord": "password31",
+      "email": "user31@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/164347/pexels-photo-164347.jpeg",
+      "status": 0
+    },
+    {
+      "id": 32,
+      "username": "user32",
+      "passWord": "password32",
+      "email": "user32@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1704124/pexels-photo-1704124.jpeg",
+      "status": 1
+    },
+    {
+      "id": 33,
+      "username": "user33",
+      "passWord": "password33",
+      "email": "user33@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/2509745/pexels-photo-2509745.jpeg",
+      "status": 0
+    },
+    {
+      "id": 34,
+      "username": "user34",
+      "passWord": "password34",
+      "email": "user34@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1509532/pexels-photo-1509532.jpeg",
+      "status": 1
+    },
+    {
+      "id": 35,
+      "username": "user35",
+      "passWord": "password35",
+      "email": "user35@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/2826217/pexels-photo-2826217.jpeg",
+      "status": 0
+    },
+    {
+      "id": 36,
+      "username": "user36",
+      "passWord": "password36",
+      "email": "user36@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1470904/pexels-photo-1470904.jpeg",
+      "status": 1
+    },
+    {
+      "id": 37,
+      "username": "user37",
+      "passWord": "password37",
+      "email": "user37@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/1291304/pexels-photo-1291304.jpeg",
+      "status": 0
+    },
+    {
+      "id": 38,
+      "username": "user38",
+      "passWord": "password38",
+      "email": "user38@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1618778/pexels-photo-1618778.jpeg",
+      "status": 1
+    },
+    {
+      "id": 39,
+      "username": "user39",
+      "passWord": "password39",
+      "email": "user39@example.com",
+      "role": 0,
+      "profilePicture": "https://images.pexels.com/photos/2549205/pexels-photo-2549205.jpeg",
+      "status": 0
+    },
+    {
+      "id": 40,
+      "username": "user40",
+      "passWord": "password40",
+      "email": "user40@example.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1613149/pexels-photo-1613149.jpeg",
+      "status": 1
+    },
+    {
+      "id": 41,
+      "username": "user1",
+      "passWord": "xuannhat1",
+      "email": "xuannhatvn2112@gmail.com",
+      "role": 1,
+      "profilePicture": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "status": 0
+    },
+    {
+      "id": 42,
+      "username": "xuannhat120333",
+      "email": "xuannhat120333@gmail.com",
+      "passWord": "xuannhat120333",
+      "role": 1,
+      "profilePicture": "https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png",
+      "status": 0
+    },
+    {
+      "id": 43,
+      "username": "xuannhat1",
+      "email": "xuannhat1@gmail.com",
+      "password": "xuannhat1"
+    }
+  ]
+}
