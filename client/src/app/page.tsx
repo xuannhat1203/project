@@ -7,9 +7,5 @@ export default function page() {
   useEffect(() => {
     route.push("/auth/login");
   }, []);
-  return (
-    <div>
-      <Header></Header>
-    </div>
-  );
+  return <div></div>;
 }

@@ -6,9 +6,10 @@ import {
   addUserAnswer,
   getAllExams,
   getAllQuestion,
+  getAllUser,
   getAllUserAnswer,
 } from "@/services/auth.service";
-import { ExamSubject, Question, UserAnswer } from "@/app/interface";
+import { ExamSubject, Question, User, UserAnswer } from "@/app/interface";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
@@ -23,13 +24,12 @@ export default function Page() {
   const [listAnswer, setListAnswer] = useState<UserAnswer[]>([]);
   const [incorrectAnswers, setIncorrectAnswers] = useState<number[]>([]);
   const [check, setCheck] = useState("");
+  const [listUser, setListUser] = useState<User[]>([]);
   useEffect(() => {
     const data = localStorage.getItem("idQuestion");
-    const data2 = localStorage.getItem("id");
     const email = localStorage.getItem("status");
-    if (data && data2 && email) {
+    if (data && email) {
       setId(JSON.parse(data));
-      setUserId(JSON.parse(data2));
       setCheck(JSON.parse(email));
     }
   }, []);
@@ -41,7 +41,14 @@ export default function Page() {
     };
     getListUserAnswer();
   }, []);
-
+  useEffect(() => {
+    const getListUserAnswer = async () => {
+      const response = await getAllUser();
+      setListUser(response);
+    };
+    getListUserAnswer();
+  }, []);
+  const find = listUser.find((user: any) => user.email === check);
   const fetchExamsAndQuestions = async () => {
     try {
       const allQuestions = await getAllQuestion();
@@ -83,8 +90,8 @@ export default function Page() {
 
     await addUserAnswer({
       id: listAnswer.length + 1,
-      useId: userId,
-      exampId: id,
+      useId: find ? find.id : "",
+      examId: id,
       score: calculatedScore,
     });
 

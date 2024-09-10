@@ -51,12 +51,6 @@
       "description": "Luyện thi Hóa học lớp 10"
     },
     {
-      "title": "Môn Toán 3",
-      "description": "Luyện thi đại học Toán học",
-      "courseId": 5,
-      "id": 5
-    },
-    {
       "id": 7,
       "title": "Thiết kế đồ họa cơ bản",
       "description": "Luyện thi các kỹ năng cơ bản về thiết kế đồ họa",
@@ -97,13 +91,6 @@
       "description": "Đề thi các câu hỏi giao tiếp tiếng Anh",
       "duration": 80,
       "examSubjectId": 3
-    },
-    {
-      "id": 5,
-      "title": "Đề thi thiết kế đồ họa cơ bản",
-      "description": "Đề thi kiểm tra các kỹ năng cơ bản về thiết kế đồ họa",
-      "duration": 90,
-      "examSubjectId": 4
     },
     {
       "id": 6,
@@ -402,6 +389,36 @@
       "id": 8,
       "useId": 1,
       "exampId": 1,
+      "score": 0
+    },
+    {
+      "id": 9,
+      "useId": 2,
+      "exampId": 4,
+      "score": 0
+    },
+    {
+      "id": 10,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    },
+    {
+      "id": 11,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    },
+    {
+      "id": 12,
+      "useId": 1,
+      "exampId": 2,
+      "score": 0
+    },
+    {
+      "id": 13,
+      "useId": 39,
+      "examId": 1,
       "score": 0
     }
   ],
@@ -741,7 +758,7 @@
     },
     {
       "id": 39,
-      "username": "user39",
+      "username": "user3902",
       "passWord": "password39",
       "email": "user39@example.com",
       "role": 0,
@@ -756,30 +773,6 @@
       "role": 1,
       "profilePicture": "https://images.pexels.com/photos/1613149/pexels-photo-1613149.jpeg",
       "status": 1
-    },
-    {
-      "id": 41,
-      "username": "user123123ne23222121",
-      "passWord": "xuannhat1",
-      "email": "xuannhatvn2112@gmail.com",
-      "role": 1,
-      "profilePicture": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "status": 0
-    },
-    {
-      "id": 42,
-      "username": "xuannhat120333",
-      "email": "xuannhat120333@gmail.com",
-      "passWord": "xuannhat120333",
-      "role": 1,
-      "profilePicture": "https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png",
-      "status": 0
-    },
-    {
-      "id": 43,
-      "username": "xuannhat1",
-      "email": "xuannhat1@gmail.com",
-      "password": "xuannhat1"
     }
   ]
 }

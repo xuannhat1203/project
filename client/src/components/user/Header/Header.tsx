@@ -2,9 +2,6 @@
 import dayjs from "dayjs";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 export default function Header() {
   const [email, setEmail] = useState<string>("");
   const route = useRouter();
@@ -133,21 +130,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      <div className="container mx-auto px-4 my-8">
-        <Slider {...settings}>
-          {carouselItems.map((item, index) => (
-            <div key={index} className="flex justify-center">
-              <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-                <img
-                  className="rounded-lg shadow-xl transition-transform duration-500 transform hover:scale-105 object-contain w-full h-full"
-                  src={item.imgPath}
-                  alt={`Slide ${index + 1}`}
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
     </div>
   );
 }

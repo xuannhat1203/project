@@ -34,7 +34,6 @@ export default function Page() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const newErrors: { [key: string]: string } = {};
     const { name, email, password, confirmPassword } = formData;
 
@@ -53,13 +52,13 @@ export default function Page() {
     } else {
       try {
         await addUser({
-          id: data.length + 1,
-          username: name,
-          email: email,
-          passWord: password,
+          id: data.length + 2,
+          username: formData.name,
+          email: formData.email,
+          passWord: formData.password,
           role: 1,
           profilePicture:
-            "https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png",
+            "https://images.pexels.com/photos/1613149/pexels-photo-1613149.jpeg",
           status: 0,
         });
         route.push("/auth/login");
