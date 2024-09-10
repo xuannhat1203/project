@@ -2,8 +2,8 @@
 import Footer from "@/components/user/Footer/Footer";
 import Header from "@/components/user/Header/Header";
 import React, { useEffect, useState } from "react";
-import { ExamSubject } from "../../../../interface/index";
-import { getAllExamSubjects } from "@/services/auth.service";
+import { Exam, ExamSubject } from "../../../../interface/index";
+import { getAllExams, getAllExamSubjects } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
+  const [listExam, setListExam] = useState<Exam[]>([]);
   const route = useRouter();
 
   useEffect(() => {
@@ -25,6 +25,8 @@ export default function Page() {
   const fetchData = async () => {
     try {
       const examSubjects = await getAllExamSubjects();
+      const exam = await getAllExams();
+      setListExam(exam);
       setListExamSubject(examSubjects);
     } catch (error) {
       console.error(error);
@@ -44,6 +46,8 @@ export default function Page() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedSubjects = filteredExamSubjects.slice(startIndex, endIndex);
+  console.log(paginatedSubjects, 9292);
+
   const totalPages = Math.ceil(filteredExamSubjects.length / itemsPerPage);
 
   const comeToExam = (id: number) => {
@@ -86,20 +90,24 @@ export default function Page() {
           </div>
         </section>
         <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {paginatedSubjects.map((subject: ExamSubject) => (
-            <div
-              onClick={() => comeToExam(subject.id)}
-              key={subject.id}
-              className="bg-teal-500 text-white p-6 rounded-lg shadow-md cursor-pointer"
-            >
-              <h3 className="text-xl font-bold mb-2">{subject.title}</h3>
-              <p className="text-sm">{subject.description}</p>
-              <div className="mt-4 text-sm">
-                {Math.floor(Math.random() * 100)} bài đề
+          {paginatedSubjects.map((subject: ExamSubject) => {
+            const find = listExam.filter(
+              (exam: any) => exam.examSubjectId === subject.id
+            );
+            return (
+              <div
+                onClick={() => comeToExam(subject.id)}
+                key={subject.id}
+                className="bg-teal-500 text-white p-6 rounded-lg shadow-md cursor-pointer"
+              >
+                <h3 className="text-xl font-bold mb-2">{subject.title}</h3>
+                <p className="text-sm">{subject.description}</p>
+                <div className="mt-4 text-sm">{find.length} bài đề</div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </section>
+
         <section className="mt-8 flex justify-center items-center space-x-4">
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}

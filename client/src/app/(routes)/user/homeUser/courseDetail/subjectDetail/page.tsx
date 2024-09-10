@@ -3,12 +3,12 @@ import Footer from "@/components/user/Footer/Footer";
 import Header from "@/components/user/Header/Header";
 import React, { useEffect, useState } from "react";
 import { getAllExams } from "@/services/auth.service";
-import { ExamSubject } from "@/app/interface";
+import { Exam, ExamSubject } from "@/app/interface";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [id, setId] = useState<number | null>(null);
-  const [listExam, setListExam] = useState<ExamSubject[]>([]);
+  const [listExam, setListExam] = useState<Exam[]>([]);
   const route = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
@@ -31,17 +31,15 @@ export default function Page() {
     fetchData();
   }, []);
 
-  const filteredExams = listExam.filter((exam) => exam.id === id);
   const goToQuestion = (id: number) => {
     localStorage.setItem("idQuestion", JSON.stringify(id));
     route.push("/user/homeUser/courseDetail/subjectDetail/listQuestions");
   };
   const filteredExamSubjects = listExam
-    .filter((exam) => exam.id === id)
+    .filter((exam) => exam.examSubjectId === id)
     .filter((exam) =>
       exam.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
   return (
     <div>
       <Header />
@@ -85,9 +83,7 @@ export default function Page() {
             >
               <h3 className="text-xl font-bold mb-2">{exam.title}</h3>
               <p className="text-sm">{exam.description}</p>
-              <div className="mt-4 text-sm">
-                {Math.floor(Math.random() * 100)} bài đề
-              </div>
+              <div className="mt-4 text-sm">4 câu hỏi</div>
             </div>
           ))}
         </section>

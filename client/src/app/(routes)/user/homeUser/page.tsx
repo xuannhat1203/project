@@ -1,7 +1,8 @@
 "use client";
+import { ExamSubject } from "@/app/interface";
 import Footer from "@/components/user/Footer/Footer";
 import Header from "@/components/user/Header/Header";
-import { getAllCourses } from "@/services/auth.service";
+import { getAllCourses, getAllExamSubjects } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -24,10 +25,12 @@ export default function Page() {
   const router = useRouter();
   const [data, setData] = useState<Course[]>([]);
   const [error, setError] = useState<string | null>(null);
-
+  const [listExam, setListExam] = useState<ExamSubject[]>([]);
   const fetchData = async () => {
     try {
       const result = await getAllCourses();
+      const getExam = await getAllExamSubjects();
+      setListExam(getExam);
       setData(result);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -81,6 +84,9 @@ export default function Page() {
             data.map((course) => {
               const randomColorClass =
                 colors[Math.floor(Math.random() * colors.length)];
+              const find = listExam.filter(
+                (exam: any) => exam.courseId === course.id
+              );
               return (
                 <div
                   onClick={() => chooseCourse(course.id)}
@@ -89,9 +95,7 @@ export default function Page() {
                 >
                   <h3 className="text-xl font-bold mb-2">{course.title}</h3>
                   <p className="text-sm">{course.description}</p>
-                  <div className="mt-4 text-sm">
-                    {Math.floor(Math.random() * 100)} bài đề
-                  </div>
+                  <div className="mt-4 text-sm">{find.length} bài đề</div>
                 </div>
               );
             })

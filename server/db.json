@@ -89,28 +89,28 @@
       "title": "Đề thi lập trình Python cơ bản",
       "description": "Đề thi các câu hỏi cơ bản về lập trình Python",
       "duration": 60,
-      "examSubjectId": 5
+      "examSubjectId": 2
     },
     {
       "id": 4,
       "title": "Đề thi tiếng Anh giao tiếp",
       "description": "Đề thi các câu hỏi giao tiếp tiếng Anh",
       "duration": 80,
-      "examSubjectId": 6
+      "examSubjectId": 3
     },
     {
       "id": 5,
       "title": "Đề thi thiết kế đồ họa cơ bản",
       "description": "Đề thi kiểm tra các kỹ năng cơ bản về thiết kế đồ họa",
       "duration": 90,
-      "examSubjectId": 7
+      "examSubjectId": 4
     },
     {
       "id": 6,
       "title": "Đề thi kinh tế học đại cương",
       "description": "Đề thi về các chủ đề cơ bản trong kinh tế học",
       "duration": 85,
-      "examSubjectId": 8
+      "examSubjectId": 5
     }
   ],
   "questions": [
