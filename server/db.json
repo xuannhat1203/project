@@ -3,8 +3,7 @@
     {
       "id": 1,
       "title": "Khóa luyện thi đại học 2",
-      "description": "Khóa luyện thi cho học sinh chuẩn bị thi đại học",
-      "type": "course"
+      "description": "Khóa luyện thi cho học sinh chuẩn bị thi đại học"
     },
     {
       "id": 2,
@@ -15,6 +14,17 @@
       "id": 3,
       "title": "Khóa luyện thi THPT",
       "description": "Dành cho học sinh lớp 10,11,12"
+    },
+    {
+      "id": 6,
+      "title": "Khóa học Thiết kế đồ họa",
+      "description": "Khóa học học về thiết kế đồ họa, bao gồm các phần mềm và kỹ thuật thiết kế mới nhất",
+      "type": "course"
+    },
+    {
+      "id": 7,
+      "title": "Khóa học Kinh tế cơ bản",
+      "description": "Khóa học cung cấp kiến thức cơ bản về kinh tế, bao gồm các khái niệm và lý thuyết chính"
     }
   ],
   "accountAdmin": {
@@ -32,7 +42,7 @@
       "id": 2,
       "title": "Vật lý lớp 11",
       "description": "Luyện thi Vật lí lớp 11",
-      "courseId": 2
+      "courseId": 1
     },
     {
       "id": 3,
@@ -45,6 +55,18 @@
       "description": "Luyện thi đại học Toán học",
       "courseId": 5,
       "id": 5
+    },
+    {
+      "id": 7,
+      "title": "Thiết kế đồ họa cơ bản",
+      "description": "Luyện thi các kỹ năng cơ bản về thiết kế đồ họa",
+      "courseId": 6
+    },
+    {
+      "id": 8,
+      "title": "Kinh tế học đại cương",
+      "description": "Luyện thi các kiến thức cơ bản trong kinh tế học",
+      "courseId": 7
     }
   ],
   "exam": [
@@ -60,7 +82,35 @@
       "title": "Đề thi Vật lý cơ bản lớp 13",
       "description": "Đề thi gồm các câu hỏi cơ bản Vật lý 13",
       "duration": 66,
-      "examSubjectId": 2
+      "examSubjectId": 1
+    },
+    {
+      "id": 3,
+      "title": "Đề thi lập trình Python cơ bản",
+      "description": "Đề thi các câu hỏi cơ bản về lập trình Python",
+      "duration": 60,
+      "examSubjectId": 5
+    },
+    {
+      "id": 4,
+      "title": "Đề thi tiếng Anh giao tiếp",
+      "description": "Đề thi các câu hỏi giao tiếp tiếng Anh",
+      "duration": 80,
+      "examSubjectId": 6
+    },
+    {
+      "id": 5,
+      "title": "Đề thi thiết kế đồ họa cơ bản",
+      "description": "Đề thi kiểm tra các kỹ năng cơ bản về thiết kế đồ họa",
+      "duration": 90,
+      "examSubjectId": 7
+    },
+    {
+      "id": 6,
+      "title": "Đề thi kinh tế học đại cương",
+      "description": "Đề thi về các chủ đề cơ bản trong kinh tế học",
+      "duration": 85,
+      "examSubjectId": 8
     }
   ],
   "questions": [
@@ -323,6 +373,36 @@
       "useId": 1,
       "exampId": 1,
       "score": 1
+    },
+    {
+      "id": 4,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    },
+    {
+      "id": 5,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    },
+    {
+      "id": 6,
+      "useId": 1,
+      "exampId": 1,
+      "score": 1
+    },
+    {
+      "id": 7,
+      "useId": 1,
+      "exampId": 1,
+      "score": 2
+    },
+    {
+      "id": 8,
+      "useId": 1,
+      "exampId": 1,
+      "score": 0
     }
   ],
   "users": [
@@ -343,16 +423,6 @@
       "role": 0,
       "profilePicture": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "status": 0
-    },
-    {
-      "username": "xuannhat1203",
-      "email": "xuannhat1203@gmail.com",
-      "passWord": "xuannhat1",
-      "role": 1,
-      "profilePicture": "https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper-thumbnail.png",
-      "status": 1,
-      "type": "user",
-      "id": 3
     },
     {
       "id": 4,
@@ -689,7 +759,7 @@
     },
     {
       "id": 41,
-      "username": "user1",
+      "username": "user123123ne23222121",
       "passWord": "xuannhat1",
       "email": "xuannhatvn2112@gmail.com",
       "role": 1,

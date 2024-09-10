@@ -10,6 +10,7 @@ export default function Page() {
   const [id, setId] = useState<number | null>(null);
   const [listExam, setListExam] = useState<ExamSubject[]>([]);
   const route = useRouter();
+  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     const data = localStorage.getItem("idExam");
     if (data) {
@@ -35,13 +36,26 @@ export default function Page() {
     localStorage.setItem("idQuestion", JSON.stringify(id));
     route.push("/user/homeUser/courseDetail/subjectDetail/listQuestions");
   };
+  const filteredExamSubjects = listExam
+    .filter((exam) => exam.id === id)
+    .filter((exam) =>
+      exam.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
   return (
     <div>
       <Header />
       <main className="container mx-auto px-4 py-8">
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">BÀI THI HOT:</h2>
-          <div className="flex space-x-4">
+          <h2 className="text-2xl font-bold mb-4">ĐỀ THI HOT:</h2>
+          <div className="flex space-x-4 mb-6">
+            <input
+              type="text"
+              placeholder="Tìm kiếm..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="border rounded px-3 py-2"
+            />
             <select className="border rounded px-3 py-2">
               <option>Chọn lớp</option>
             </select>
@@ -63,7 +77,7 @@ export default function Page() {
           </div>
         </section>
         <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredExams.map((exam) => (
+          {filteredExamSubjects.map((exam) => (
             <div
               onClick={() => goToQuestion(exam.id)}
               key={exam.id}

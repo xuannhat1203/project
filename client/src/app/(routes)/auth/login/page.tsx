@@ -45,6 +45,7 @@ export default function Page() {
       return;
     }
     if (email === acc.email && password === acc.passWord) {
+      localStorage.setItem("status", JSON.stringify(`${email}`));
       router.push("/admin/HomeAdmin");
       return;
     }
@@ -61,6 +62,7 @@ export default function Page() {
     }
 
     if (user.passWord === password) {
+      localStorage.setItem("status", JSON.stringify(`${email}`));
       router.push("/user/homeUser");
     } else {
       setError("Sai mật khẩu. Vui lòng thử lại!");

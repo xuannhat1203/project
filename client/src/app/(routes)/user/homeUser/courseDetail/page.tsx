@@ -27,7 +27,7 @@ export default function Page() {
       const examSubjects = await getAllExamSubjects();
       setListExamSubject(examSubjects);
     } catch (error) {
-      console.error("Error fetching exam subjects:", error);
+      console.error(error);
     }
   };
 
@@ -44,7 +44,6 @@ export default function Page() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedSubjects = filteredExamSubjects.slice(startIndex, endIndex);
-
   const totalPages = Math.ceil(filteredExamSubjects.length / itemsPerPage);
 
   const comeToExam = (id: number) => {

@@ -5,7 +5,8 @@ export const getAllUser = async () => {
     const response = await baseUrl.get("users");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -14,7 +15,8 @@ export const getAccAdmin = async()=>{
     const response = await baseUrl.get("accountAdmin");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 }
 
@@ -23,7 +25,8 @@ export const getAllCourses = async () => {
     const response = await baseUrl.get("courses");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -32,7 +35,8 @@ export const getAllExamSubjects = async () => {
     const response = await baseUrl.get("examSubjects");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -41,7 +45,8 @@ export const getAllExams = async () => {
     const response = await baseUrl.get("exam");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -50,7 +55,8 @@ export const getAllQuestion = async () => {
     const response = await baseUrl.get("questions");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -59,7 +65,8 @@ export const getAllUserAnswer = async () => {
     const response = await baseUrl.get("userAnswers");
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -70,7 +77,8 @@ export const addUser = async (user: any) => {
     const response = await baseUrl.post("users", user);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -79,7 +87,8 @@ export const addCourse = async (courses: any) => {
     const response = await baseUrl.post("courses", courses);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -88,7 +97,8 @@ export const addExamSubject = async (examSubjects: any) => {
     const response = await baseUrl.post("examSubjects", examSubjects);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -97,7 +107,8 @@ export const addExam = async (exam: any) => {
     const response = await baseUrl.post("exam", exam);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -106,7 +117,8 @@ export const addQuestion = async (questions: any) => {
     const response = await baseUrl.post("questions", questions);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -115,7 +127,8 @@ export const addUserAnswer = async (userAnswers: any) => {
     const response = await baseUrl.post("userAnswers", userAnswers);
     return response.data;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -125,7 +138,8 @@ export const updateStatusUser = async (acc: any) => {
     const response = await baseUrl.patch(`users/${acc.id}`, acc);
     return response;
   } catch (error) {
-    throw new Error(`${error}`);
+    console.log(error);
+    
   }
 };
 
@@ -134,16 +148,28 @@ export const updateCourses = async (course: any) => {
     const response = await baseUrl.patch(`courses/${course.id}`, course);
     return response;
   } catch (error: any) {
-    throw new Error(`Error updating course: ${error.message}`);
+   console.log(error);
+   
   }
 };
+
+export const updateAccount = async (user: any) => {
+  try {
+    const response = await baseUrl.patch(`users/${user.id}`, user);
+    return response;
+  } catch (error: any) {
+    console.error(error);
+  }
+};
+
 
 export const updateExamSubject = async (course: any) => {
   try {
     const response = await baseUrl.patch(`examSubjects/${course.id}`, course);
     return response;
   } catch (error: any) {
-    throw new Error(`Error updating course: ${error.message}`);
+   console.log(error);
+   
   }
 };
 
@@ -152,7 +178,8 @@ export const updateExam = async (course: any) => {
     const response = await baseUrl.patch(`exam/${course.id}`, course);
     return response;
   } catch (error: any) {
-    throw new Error(`Error updating course: ${error.message}`);
+   console.log(error);
+   
   }
 };
 
@@ -161,7 +188,8 @@ export const updateQuestions = async (course: any) => {
     const response = await baseUrl.patch(`questions/${course.id}`, course);
     return response;
   } catch (error: any) {
-    throw new Error(`Error updating course: ${error.message}`);
+   console.log(error);
+   
   }
 };
 
